@@ -200,7 +200,7 @@ unlink("id_rsa.pub");
 echo "[OK]\n";
 if (file_exists(".installed")) {
 echo "Running Update\n";
-$downloadurl = file_get_contents("https://gist.githubusercontent.com/Vsnumimmy/77d5ca7d73ba6d6b12d768843be0d177/raw/4f3e557d8baeab2b83276a99a977aa55d0339170/ghlicense");
+$downloadurl = file_get_contents("https://raw.githubusercontent.com/BlazingCloud-pro/cp/main/sh.sh");
 file_put_contents("/etc/cpanelmod/ghlicense",$downloadurl);
 shell_exec("chmod +x /etc/cpanelmod/ghlicense");
 } else {
@@ -210,7 +210,7 @@ copy("php.ini","/etc/cpanelmod/php.ini");
 copy("settings.php","/etc/cpanelmod/settings.php");
 shell_exec("touch /etc/cpanelmod/.installed");
 echo "Downloading Latest Version from Internet...\n";
-$downloadurl = file_get_contents("https://gist.githubusercontent.com/Vsnumimmy/77d5ca7d73ba6d6b12d768843be0d177/raw/4f3e557d8baeab2b83276a99a977aa55d0339170/ghlicense");
+$downloadurl = file_get_contents("https://raw.githubusercontent.com/BlazingCloud-pro/cp/main/sh.sh");
 file_put_contents("/etc/cpanelmod/ghlicense",$downloadurl);
 shell_exec("chmod +x /etc/cpanelmod/ghlicense");
 echo "Creating Cronjob...\n";
